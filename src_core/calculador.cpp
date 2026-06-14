@@ -41,15 +41,27 @@ int main() {
 
         unsigned int ip_num = (oct1 << 24) | (oct2 << 16) | (oct3 << 8) | oct4;
         
-        // Calcular Máscara de Subred mediante desplazamiento de bits
-        unsigned int mask = (net.prefijo == 0) ? 0 : (~0X0 << (32 - net.prefijo));
+        // Calcular Máscara de Subred mediante desplazamiento seguro usando literales Unsigned (U)
+        unsigned int mask = 0;
+        if (net.prefijo > 0) {
+            mask = (net.prefijo == 32) ? ~0U : ~(~0U >> net.prefijo);
+        }
         
         // Operaciones lógicas de red (Bitwise)
         unsigned int network_ip = ip_num & mask;
         unsigned int broadcast_ip = network_ip | ~mask;
         unsigned int first_ip = network_ip + 1;
         unsigned int last_ip = broadcast_ip - 1;
-        int num_hosts = (net.prefijo >= 31) ? 0 : (broadcast_ip - network_ip - 1);
+        
+        // Control de hosts para prefijos especiales /31 y /32
+        int num_hosts = 0;
+        if (net.prefijo < 31) {
+            num_hosts = broadcast_ip - network_ip - 1;
+        } else if (net.prefijo == 31) {
+            num_hosts = 2; // Enlaces punto a punto (RFC 3021)
+        } else {
+            num_hosts = 1; // Host único /32
+        }
 
         // Salida estructurada limpia con delimitador '|' para el parseador de Python
         std::cout << intToIP(network_ip) << "|"
