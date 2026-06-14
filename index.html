@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IP v4 - DevNod-INC</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <h2>Calculadora de IP v4</h2>
+        <input type="text" id="ip-filter" placeholder="Ingrese una dirección IP (Ej: 192.168.1.)...">
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Dirección de Red</th>
+                    <th>Primer IP</th>
+                    <th>Última IP</th>
+                    <th>Broadcast</th>
+                    <th>Máscara de Subred</th>
+                    <th>Número de Hosts</th>
+                    <th>Longitud de Prefijo</th>
+                </tr>
+            </thead>
+            <tbody id="tabla-subredes">
+                </tbody>
+        </table>
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
