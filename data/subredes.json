@@ -18,24 +18,6 @@
         "prefijo": 24
     },
     {
-        "direccion_red": "10.0.0.0",
-        "primer_ip": "10.0.0.1",
-        "ultima_ip": "10.255.255.254",
-        "broadcast": "10.255.255.255",
-        "mascara": "255.0.0.0",
-        "hosts": 16777214,
-        "prefijo": 8
-    },
-    {
-        "direccion_red": "172.16.0.0",
-        "primer_ip": "172.16.0.1",
-        "ultima_ip": "172.31.255.254",
-        "broadcast": "172.31.255.255",
-        "mascara": "255.240.0.0",
-        "hosts": 1048574,
-        "prefijo": 12
-    },
-    {
         "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.1",
         "ultima_ip": "192.168.1.30",
@@ -63,21 +45,21 @@
         "prefijo": 27
     },
     {
-        "direccion_red": "192.168.1.96",
-        "primer_ip": "192.168.1.97",
-        "ultima_ip": "192.168.1.110",
-        "broadcast": "192.168.1.111",
-        "mascara": "255.255.255.240",
-        "hosts": 14,
-        "prefijo": 28
+        "direccion_red": "10.0.0.0",
+        "primer_ip": "10.0.0.1",
+        "ultima_ip": "10.255.255.254",
+        "broadcast": "10.255.255.255",
+        "mascara": "255.0.0.0",
+        "hosts": 16777214,
+        "prefijo": 8
     },
     {
-        "direccion_red": "192.168.1.112",
-        "primer_ip": "192.168.1.113",
-        "ultima_ip": "192.168.1.114",
-        "broadcast": "192.168.1.115",
-        "mascara": "255.255.255.252",
-        "hosts": 2,
-        "prefijo": 30
+        "direccion_red": "172.16.0.0",
+        "primer_ip": "172.16.0.1",
+        "ultima_ip": "172.31.255.254",
+        "broadcast": "172.31.255.255",
+        "mascara": "255.240.0.0",
+        "hosts": 1048574,
+        "prefijo": 12
     }
 ]
