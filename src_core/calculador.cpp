@@ -1,10 +1,13 @@
 #include <iostream>
+#include <iomanip>
+#include <bitset>
+#include <vector>
 #include <sstream>
 #include <string>
-#include <vector>
 
 using namespace std;
 
+// Función para convertir una dirección IP a un número entero
 uint32_t ipToInt(const string& ip) {
     uint32_t result = 0;
     istringstream iss(ip);
@@ -15,6 +18,7 @@ uint32_t ipToInt(const string& ip) {
     return result;
 }
 
+// Función para convertir un número entero a una dirección IP
 string intToIp(uint32_t ip) {
     ostringstream oss;
     oss << ((ip >> 24) & 0xFF) << '.'
@@ -25,41 +29,48 @@ string intToIp(uint32_t ip) {
 }
 
 int main(int argc, char* argv[]) {
-    // Valores por defecto si no se pasan argumentos (Evita que el pipeline falle)
+    // Valores predeterminados por si se ejecuta sin argumentos (Modo Automatizado Seguros)
     string baseIP = "192.168.1.0";
     int prefix = 24;
 
-    // Si el script de Python le pasa parámetros, los usamos
+    // Si Python le inyecta argumentos por consola, los tomamos dinámicamente
     if (argc >= 3) {
         baseIP = argv[1];
         prefix = stoi(argv[2]);
     }
 
-    // Cálculos de bits basados en tu ejemplo
-    uint32_t mask = (prefix == 0) ? 0 : (~0 << (32 - prefix)) >>> 0; 
+    // Calcular máscara de subred (Fijamos la compatibilidad bitwise estándar de C++)
+    uint32_t mask = (prefix == 0) ? 0 : ~((1ULL << (32 - prefix)) - 1);
     if (prefix == 32) mask = 0xFFFFFFFF;
-    
+
     uint32_t baseIpInt = ipToInt(baseIP);
-    uint32_t subnetSize = 1 << (32 - prefix);
+    uint32_t subnetSize = (prefix == 32) ? 1 : (1U << (32 - prefix));
     
-    // Evitar desbordes de memoria si el prefijo es muy bajo
+    // Evitar desbordamiento de bucle si el prefijo es muy amplio en automatizaciones
     int numSubnets = 1;
     if (prefix >= 24 && prefix < 32) {
         numSubnets = 1 << (prefix - 24);
     }
 
-    // Retornamos los datos formateados en texto plano para que Python los capture
+    // Salida limpia delimitada por pipes (|) para que Python arme el JSON
     for (int i = 0; i < numSubnets; ++i) {
         uint32_t subnetBase = (baseIpInt & mask) + (i * subnetSize);
         uint32_t broadcastBase = subnetBase + subnetSize - 1;
         
+        string subnetIP = intToIp(subnetBase);
+        string broadcastIP = intToIp(broadcastBase);
+        string firstHostIP = (prefix == 32) ? intToIp(subnetBase) : intToIp(subnetBase + 1);
+        string lastHostIP = (prefix == 32) ? intToIp(subnetBase) : intToIp(broadcastBase - 1);
+        string maskIP = intToIp(mask);
+        
         int hosts = (prefix < 31) ? (subnetSize - 2) : (prefix == 31 ? 2 : 1);
 
-        cout << intToIp(subnetBase) << "|"
-             << intToIp(subnetBase + 1) << "|"
-             << intToIp(broadcastBase - 1) << "|"
-             << intToIp(broadcastBase) << "|"
-             << intToIp(mask) << "|"
+        // Imprimir en el formato que espera tu script bridge de Python
+        cout << subnetIP << "|"
+             << firstHostIP << "|"
+             << lastHostIP << "|"
+             << broadcastIP << "|"
+             << maskIP << "|"
              << hosts << "|"
              << prefix << "\n";
     }
