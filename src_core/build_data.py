@@ -12,18 +12,28 @@ def generar_base_datos_ip():
     
     print(f"[*] Buscando código fuente en: {ruta_cpp}")
     
-    # Verificación de seguridad: si no está en src_core, buscarlo en la raíz
+    # Verificación de seguridad estricta para GitHub Actions
     if not os.path.exists(ruta_cpp):
-        print("[!] Advertencia: calculador.cpp no se encontró en src_core. Buscando en la raíz...")
-        ruta_cpp = os.path.join(os.path.dirname(dir_actual), "calculador.cpp")
+        print("[!] Advertencia: calculador.cpp no se encontró en src_core. Forzando ruta alternativa...")
+        ruta_cpp = os.path.join(os.getcwd(), "src_core", "calculador.cpp")
+        ruta_binario = os.path.join(os.getcwd(), "src_core", "calculador_core")
     
     # 3. Compilar el núcleo nativo de C++ usando las rutas verificadas
-    print(f"[*] Compilando binario con G++...")
+    print(f"[*] Compilando binario con G++ en: {ruta_binario}")
     subprocess.run(["g++", ruta_cpp, "-o", ruta_binario], check=True)
     
-    # 4. Ejecutar el núcleo y capturar las subredes calculadas
-    print(f"[*] Ejecutando núcleo de cálculo nativo...")
-    resultado = subprocess.run([ruta_binario], capture_output=True, text=True, check=True)
+    # 4. Ejecutar el núcleo pasándole parámetros iniciales seguros (Evita ejecuciones vacías)
+    # Aquí puedes cambiar la IP y el prefijo por defecto si deseas otro segmento base en el build
+    ip_base_default = "192.168.1.0"
+    prefijo_default = "24"
+    
+    print(f"[*] Ejecutando núcleo de cálculo nativo para {ip_base_default}/{prefijo_default}...")
+    resultado = subprocess.run(
+        [ruta_binario, ip_base_default, prefijo_default], 
+        capture_output=True, 
+        text=True, 
+        check=True
+    )
     
     lineas = resultado.stdout.strip().split("\n")
     subredes_lista = []
@@ -43,6 +53,7 @@ def generar_base_datos_ip():
             subredes_lista.append(subred)
             
     # 5. Guardar el JSON siempre en la carpeta /data de la raíz pública del proyecto
+    # Si dir_actual es /src_core, el padre es la raíz. Raíz + "data" es lo correcto.
     ruta_salida_data = os.path.join(os.path.dirname(dir_actual), "data")
     os.makedirs(ruta_salida_data, exist_ok=True)
     
