@@ -3,31 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de IP v4 - DevNod-INC</title>
+    <title>Calculadora de IP v4 — DevNod-INC</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
     <div class="calculator-container">
-        <h2>Calculadora de IP v4</h2>
-        <input type="text" id="ip-filter" placeholder="Ingrese una dirección IP (Ej: 192.168.1.)...">
+        <header class="calc-header">
+            <h2>Calculadora de IP v4</h2>
+            <p class="subtitle">Infraestructura lógica precalculada mediante el núcleo nativo de C++.</p>
+        </header>
         
-        <table>
-            <thead>
-                <tr>
-                    <th>Dirección de Red</th>
-                    <th>Primer IP</th>
-                    <th>Última IP</th>
-                    <th>Broadcast</th>
-                    <th>Máscara de Subred</th>
-                    <th>Número de Hosts</th>
-                    <th>Longitud de Prefijo</th>
-                </tr>
-            </thead>
-            <tbody id="tabla-subredes">
+        <div class="search-box">
+            <input type="text" id="ip-filter" placeholder="Filtrar subred o máscara (Ej: 192.168.1. o /24)..." autocomplete="off">
+        </div>
+        
+        <div class="table-responsive">
+            <table class="network-table">
+                <thead>
+                    <tr>
+                        <th>Dirección de Red</th>
+                        <th>Primer IP</th>
+                        <th>Última IP</th>
+                        <th>Broadcast</th>
+                        <th>Máscara de Subred</th>
+                        <th>Número de Hosts</th>
+                        <th>Longitud de Prefijo</th>
+                    </tr>
+                </thead>
+                <tbody id="tabla-subredes">
+                    <tr>
+                        <td colspan="7" class="loading-state">Sincronizando registros de red...</td>
+                    </tr>
                 </tbody>
-        </table>
+            </table>
+        </div>
     </div>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
-
