@@ -14,26 +14,27 @@ std::string intToIP(unsigned int ip) {
 }
 
 int main() {
-    // Lista de subredes base para precalcular en el build-time
-    // Esto simula la generación nativa de segmentos fijos o dinámicos en entornos corporativos
     struct BaseNet {
         std::string ip_base;
         int prefijo;
     };
 
+    // Matriz de infraestructura expandida con múltiples prefijos para pruebas del Frontend
     std::vector<BaseNet> segmentos_base = {
         {"192.168.1.0", 24},
         {"192.168.2.0", 24},
-        {"192.168.3.0", 24},
-        {"192.168.4.0", 24},
-        {"192.168.5.0", 24},
-        {"192.168.6.0", 24},
-        {"192.168.7.0", 24},
-        {"192.168.8.0", 24}
+        {"10.0.0.0", 8},
+        {"172.16.0.0", 12},
+        // Segmentos de subredes con prefijo /27 para validar tu filtro instantáneo
+        {"192.168.1.0", 27},
+        {"192.168.1.32", 27},
+        {"192.168.1.64", 27},
+        // Otros prefijos críticos de alta densidad
+        {"192.168.1.96", 28},
+        {"192.168.1.112", 30}
     };
 
     for (const auto& net : segmentos_base) {
-        // Parsear la IP base básica para operar con máscaras de bits
         unsigned int oct1, oct2, oct3, oct4;
         char ch;
         std::stringstream ss(net.ip_base);
@@ -41,29 +42,25 @@ int main() {
 
         unsigned int ip_num = (oct1 << 24) | (oct2 << 16) | (oct3 << 8) | oct4;
         
-        // Calcular Máscara de Subred mediante desplazamiento seguro usando literales Unsigned (U)
         unsigned int mask = 0;
         if (net.prefijo > 0) {
             mask = (net.prefijo == 32) ? ~0U : ~(~0U >> net.prefijo);
         }
         
-        // Operaciones lógicas de red (Bitwise)
         unsigned int network_ip = ip_num & mask;
         unsigned int broadcast_ip = network_ip | ~mask;
         unsigned int first_ip = network_ip + 1;
         unsigned int last_ip = broadcast_ip - 1;
         
-        // Control de hosts para prefijos especiales /31 y /32
         int num_hosts = 0;
         if (net.prefijo < 31) {
             num_hosts = broadcast_ip - network_ip - 1;
         } else if (net.prefijo == 31) {
-            num_hosts = 2; // Enlaces punto a punto (RFC 3021)
+            num_hosts = 2;
         } else {
-            num_hosts = 1; // Host único /32
+            num_hosts = 1;
         }
 
-        // Salida estructurada limpia con delimitador '|' para el parseador de Python
         std::cout << intToIP(network_ip) << "|"
                   << intToIP(first_ip) << "|"
                   << intToIP(last_ip) << "|"
