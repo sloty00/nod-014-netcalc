@@ -3,33 +3,32 @@ import json
 import os
 
 def generar_base_datos_ip():
-    # 1. Obtener la ruta absoluta del directorio donde está ESTE script (src_core)
+    # 1. Obtener la ruta del directorio donde está este script (src_core)
     dir_actual = os.path.dirname(os.path.abspath(__file__))
     
-    # 2. Definir las rutas absolutas de los archivos de C++
+    # 2. Definir rutas absolutas para evitar fallos de entorno en GitHub Actions
     ruta_cpp = os.path.join(dir_actual, "calculador.cpp")
     ruta_binario = os.path.join(dir_actual, "calculador_core")
     
     print(f"[*] Buscando código fuente en: {ruta_cpp}")
     
-    # Verificación de seguridad estricta para GitHub Actions
     if not os.path.exists(ruta_cpp):
-        print("[!] Advertencia: calculador.cpp no se encontró en src_core. Forzando ruta alternativa...")
+        print("[!] Error crítico: No se encontró calculador.cpp en src_core.")
+        # Fallback de emergencia a la raíz de ejecución actual
         ruta_cpp = os.path.join(os.getcwd(), "src_core", "calculador.cpp")
         ruta_binario = os.path.join(os.getcwd(), "src_core", "calculador_core")
     
-    # 3. Compilar el núcleo nativo de C++ usando las rutas verificadas
-    print(f"[*] Compilando binario con G++ en: {ruta_binario}")
+    # 3. Compilar el núcleo nativo de C++
+    print(f"[*] Compilando binario con G++...")
     subprocess.run(["g++", ruta_cpp, "-o", ruta_binario], check=True)
     
-    # 4. Ejecutar el núcleo pasándole parámetros iniciales seguros (Evita ejecuciones vacías)
-    # Aquí puedes cambiar la IP y el prefijo por defecto si deseas otro segmento base en el build
-    ip_base_default = "192.168.1.0"
-    prefijo_default = "24"
+    # 4. Ejecutar el binario pasándole parámetros por defecto
+    ip_defecto = "192.168.1.0"
+    prefijo_defecto = "24"
+    print(f"[*] Ejecutando núcleo nativo para {ip_defecto}/{prefijo_defecto}...")
     
-    print(f"[*] Ejecutando núcleo de cálculo nativo para {ip_base_default}/{prefijo_default}...")
     resultado = subprocess.run(
-        [ruta_binario, ip_base_default, prefijo_default], 
+        [ruta_binario, ip_defecto, prefijo_defecto], 
         capture_output=True, 
         text=True, 
         check=True
@@ -52,8 +51,7 @@ def generar_base_datos_ip():
             }
             subredes_lista.append(subred)
             
-    # 5. Guardar el JSON siempre en la carpeta /data de la raíz pública del proyecto
-    # Si dir_actual es /src_core, el padre es la raíz. Raíz + "data" es lo correcto.
+    # 5. Guardar el JSON en la carpeta /data en la raíz del proyecto
     ruta_salida_data = os.path.join(os.path.dirname(dir_actual), "data")
     os.makedirs(ruta_salida_data, exist_ok=True)
     
