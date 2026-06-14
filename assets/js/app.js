@@ -1,70 +1,112 @@
 document.addEventListener("DOMContentLoaded", () => {
     const tabla = document.getElementById("tabla-subredes");
     const filtroInput = document.getElementById("ip-filter");
-    let todasLasSubredes = []; // Caché local de datos
+    let todasLasSubredes = []; // Guarda las subredes base iniciales
 
-    // 1. Resolver ruta base dinámica para soportar el subdirectorio de GitHub Pages
+    // 1. Cargar datos iniciales del backend (manteniendo tu arquitectura)
     const pathBase = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname + '/';
     const dataUrl = `${window.location.origin}${pathBase}data/subredes.json?v=${new Date().getTime()}`;
 
-    // Validación temprana del DOM
-    if (!tabla) {
-        console.error("Error estructural: No se encontró el elemento con ID 'tabla-subredes'.");
-        return;
+    if (tabla) {
+        fetch(dataUrl)
+            .then(res => res.ok ? res.json() : [])
+            .then(data => {
+                todasLasSubredes = Array.isArray(data) ? data : [];
+                renderizarTabla(todasLasSubredes);
+            })
+            .catch(() => {
+                tabla.innerHTML = `<tr><td colspan="7" style="color: #ff7b72; text-align: center;">⚠️ Error al sincronizar el mapa base.</td></tr>`;
+            });
     }
 
-    // 2. Cargar los datos precalculados por el backend híbrido (C++ / Python)
-    fetch(dataUrl)
-        .then(res => {
-            if (!res.ok) {
-                throw new Error(`HTTP error! Estado: ${res.status} - Verifica que el pipeline haya generado el archivo.`);
-            }
-            return res.json();
-        })
-        .then(data => {
-            todasLasSubredes = Array.isArray(data) ? data : [];
-            if (todasLasSubredes.length === 0) {
-                tabla.innerHTML = `<tr><td colspan="7" style="color: #ffa657; text-align: center;">⚠️ Matriz de red vacía. Esperando inicialización de datos.</td></tr>`;
-            } else {
-                renderizarTabla(todasLasSubredes);
-            }
-        })
-        .catch(err => {
-            console.error("Error al sincronizar mapa de red:", err);
-            tabla.innerHTML = `<tr><td colspan="7" style="color: #ff7b72; text-align: center;">⚠️ Error en el enlace de datos. Asegúrate de que el pipeline de GitHub Actions haya terminado con éxito.</td></tr>`;
-        });
+    // 2. FUNCIÓN DE CÁLCULO DINÁMICO (Lógica Bitwise en Frontend)
+    function calcularSubredDinamica(ipString, prefijo) {
+        const octetos = ipString.split('.').map(Number);
+        if (octetos.length !== 4 || octetos.some(isNaN) || octetos.some(o => o < 0 || o > 255)) return null;
+        if (prefijo < 0 || prefijo > 32 || isNaN(prefijo)) return null;
 
-    // 3. Función de renderizado optimizada con salvaguardas (Fallbacks)
+        // Convertir IP a entero de 32 bits
+        const ipNum = (octetos[0] << 24) >>> 0 | (octetos[1] << 16) | (octetos[2] << 8) | octetos[3];
+
+        // Calcular máscara
+        const maskNum = prefijo === 0 ? 0 : (~0 << (32 - prefijo)) >>> 0;
+
+        // Operaciones de red
+        const netNum = (ipNum & maskNum) >>> 0;
+        const broadNum = (netNum | ~maskNum) >>> 0;
+
+        const firstNum = netNum + 1;
+        const lastNum = broadNum - 1;
+
+        // Formatear enteros a string IP
+        const longToIP = (num) => [
+            (num >>> 24) & 255,
+            (num >>> 16) & 255,
+            (num >>> 8) & 255,
+            num & 255
+        ].join('.');
+
+        let hosts = 0;
+        if (prefijo < 31) hosts = broadNum - netNum - 1;
+        else if (prefijo === 31) hosts = 2;
+        else hosts = 1;
+
+        return {
+            direccion_red: longToIP(netNum),
+            primer_ip: prefijo === 32 ? longToIP(netNum) : longToIP(firstNum),
+            ultima_ip: prefijo === 32 ? longToIP(netNum) : longToIP(lastNum),
+            broadcast: prefijo === 32 ? longToIP(netNum) : longToIP(broadNum),
+            mascara: longToIP(maskNum),
+            hosts: hosts,
+            prefijo: prefijo
+        };
+    }
+
     function renderizarTabla(lista) {
+        if (!tabla) return;
+        if (lista.length === 0) {
+            tabla.innerHTML = `<tr><td colspan="7" style="color: #8b949e; text-align: center;">No hay coincidencias o formato inválido.</td></tr>`;
+            return;
+        }
         tabla.innerHTML = lista.map(item => `
             <tr>
-                <td style="color: #ff7b72; font-weight: bold;">${item.direccion_red || '0.0.0.0'}</td>
-                <td style="color: #a5d6ff;">${item.primer_ip || '0.0.0.0'}</td>
-                <td style="color: #a5d6ff;">${item.ultima_ip || '0.0.0.0'}</td>
-                <td style="color: #79c0ff;">${item.broadcast || '0.0.0.0'}</td>
-                <td>${item.mascara || '255.255.255.0'}</td>
-                <td style="color: #58a6ff;">${item.hosts !== undefined ? item.hosts : 0}</td>
-                <td>/${item.prefijo || 0}</td>
+                <td style="color: #ff7b72; font-weight: bold;">${item.direccion_red}</td>
+                <td style="color: #a5d6ff;">${item.primer_ip}</td>
+                <td style="color: #a5d6ff;">${item.ultima_ip}</td>
+                <td style="color: #79c0ff;">${item.broadcast}</td>
+                <td>${item.mascara}</td>
+                <td style="color: #58a6ff;">${item.hosts}</td>
+                <td>/${item.prefijo}</td>
             </tr>
         `).join('');
     }
 
-    // 4. Filtro reactivo en tiempo real protegido contra valores nulos
+    // 3. ESCUCHA REACTIVA INTELIGENTE
     if (filtroInput) {
         filtroInput.addEventListener("input", (e) => {
-            const busqueda = e.target.value.trim().toLowerCase();
-            
-            const filtradas = todasLasSubredes.filter(item => {
-                const red = item.direccion_red ? item.direccion_red.toLowerCase() : '';
-                const mask = item.mascara ? item.mascara.toLowerCase() : '';
-                const pref = item.prefijo ? item.prefijo.toString() : '';
+            const valor = e.target.value.trim();
+
+            // Detectar si el usuario metió una estructura completa CIDR (Ej: 192.168.1.0/27)
+            if (valor.includes('/')) {
+                const partes = valor.split('/');
+                const ipParte = partes[0];
+                const prefijoParte = parseInt(partes[1], 10);
+
+                const resultadoDinamico = calcularSubredDinamica(ipParte, prefijoParte);
                 
-                return red.includes(busqueda) || mask.includes(busqueda) || pref.includes(busqueda);
-            });
-            
+                if (resultadoDinamico) {
+                    renderizarTabla([resultadoDinamico]); // Renderiza el cálculo en tiempo real
+                    return;
+                }
+            }
+
+            // Si no es un bloque CIDR válido, vuelve al modo filtro de la lista base
+            const busqueda = valor.toLowerCase();
+            const filtradas = todasLasSubredes.filter(item => 
+                item.direccion_red.toLowerCase().includes(busqueda) || 
+                item.mascara.includes(busqueda)
+            );
             renderizarTabla(filtradas);
         });
-    } else {
-        console.warn("Advertencia: No se detectó el input '#ip-filter' para la búsqueda.");
     }
 });
