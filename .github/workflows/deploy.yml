@@ -1,17 +1,3 @@
-¡Ya estamos en la recta final! Si el pipeline de GitHub Actions corrió por completo en verde, significa que tu motor en C++ compiló y el puente de Python generó exitosamente la matriz de subredes en el JSON.
-
-El error 404 File Not Found de GitHub Pages que ves en image_0ee13b.png ocurre por una regla muy específica del despliegue estático de GitHub: la ubicación de la carpeta de salida.
-
-Al usar la acción de despliegue JamesIves/github-pages-deploy-action@v4 con folder: ., le estás diciendo que suba todo el repositorio a la rama gh-pages. Sin embargo, GitHub Pages busca por defecto el archivo index.html en la raíz absoluta de lo que se publica. Si tus archivos quedaron un nivel más abajo o si la acción de despliegue no creó la rama correctamente estructurada, el servidor web colapsa.
-
-Además, hay un detalle con la ruta que usa tu JavaScript para consumir el JSON bajo el subdominio del repositorio (/nod-014-netcalc/).
-
-Aquí tienes la solución exacta para corregir ambos puntos y que la calculadora monte la infraestructura visual de inmediato:
-
-Paso 1: Corregir el flujo de despliegue (.github/workflows/deploy.yml)
-Debemos asegurarnos de que GitHub Actions limpie y empaquete la estructura exactamente como Pages lo espera. Modifica tu archivo .github/workflows/deploy.yml para dejar el paso de despliegue configurado de forma óptima:
-
-YAML
 name: Deploy DevNod Blank Page NetCalc
 
 on:
