@@ -1,1 +1,30 @@
+name: Deploy DevNod Blank Page NetCalc
 
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clonar Repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Entorno Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Ejecutar Pipeline de Cómputo (C++ / Python)
+        run: |
+          cd src_core
+          python build_data.py
+
+      - name: Desplegar en GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: . # Despliega la raíz directamente (index.html, assets, data)
+          branch: gh-pages
