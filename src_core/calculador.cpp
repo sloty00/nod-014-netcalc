@@ -29,30 +29,32 @@ string intToIp(uint32_t ip) {
 }
 
 int main(int argc, char* argv[]) {
-    // Valores predeterminados por si se ejecuta sin argumentos (Modo Automatizado Seguros)
+    // Parámetros base por defecto para que el Pipeline corra en frío
     string baseIP = "192.168.1.0";
     int prefix = 24;
 
-    // Si Python le inyecta argumentos por consola, los tomamos dinámicamente
+    // Si tu script de Python le pasa parámetros, los recolectamos
     if (argc >= 3) {
         baseIP = argv[1];
         prefix = stoi(argv[2]);
     }
 
-    // Calcular máscara de subred (Fijamos la compatibilidad bitwise estándar de C++)
-    uint32_t mask = (prefix == 0) ? 0 : ~((1ULL << (32 - prefix)) - 1);
-    if (prefix == 32) mask = 0xFFFFFFFF;
-
+    // Declaración segura de variables (Evita errores de scope en G++)
+    uint32_t mask = 0;
+    if (prefix > 0) {
+        mask = (prefix == 32) ? 0xFFFFFFFF : ~((1ULL << (32 - prefix)) - 1);
+    }
+    
     uint32_t baseIpInt = ipToInt(baseIP);
     uint32_t subnetSize = (prefix == 32) ? 1 : (1U << (32 - prefix));
     
-    // Evitar desbordamiento de bucle si el prefijo es muy amplio en automatizaciones
+    // Controlar el número de iteraciones en el deploy
     int numSubnets = 1;
     if (prefix >= 24 && prefix < 32) {
         numSubnets = 1 << (prefix - 24);
     }
 
-    // Salida limpia delimitada por pipes (|) para que Python arme el JSON
+    // Bucle de cálculo basado en tu algoritmo original
     for (int i = 0; i < numSubnets; ++i) {
         uint32_t subnetBase = (baseIpInt & mask) + (i * subnetSize);
         uint32_t broadcastBase = subnetBase + subnetSize - 1;
@@ -65,7 +67,7 @@ int main(int argc, char* argv[]) {
         
         int hosts = (prefix < 31) ? (subnetSize - 2) : (prefix == 31 ? 2 : 1);
 
-        // Imprimir en el formato que espera tu script bridge de Python
+        // Retorno estructurado con pipes para tu script 'build_data.py'
         cout << subnetIP << "|"
              << firstHostIP << "|"
              << lastHostIP << "|"
