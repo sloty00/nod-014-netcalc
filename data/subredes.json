@@ -6,7 +6,25 @@
         "broadcast": "192.168.1.255",
         "mascara": "255.255.255.0",
         "hosts": 254,
-        "prefijo": 24
+        "prefijo": "/24"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.1",
+        "ultima_ip": "192.168.1.126",
+        "broadcast": "192.168.1.127",
+        "mascara": "255.255.255.128",
+        "hosts": 126,
+        "prefijo": "/25"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.129",
+        "ultima_ip": "192.168.1.254",
+        "broadcast": "192.168.1.255",
+        "mascara": "255.255.255.128",
+        "hosts": 126,
+        "prefijo": "/25"
     },
     {
         "direccion_red": "192.168.1.0",
@@ -15,34 +33,34 @@
         "broadcast": "192.168.1.63",
         "mascara": "255.255.255.192",
         "hosts": 62,
-        "prefijo": 26
+        "prefijo": "/26"
     },
     {
-        "direccion_red": "192.168.1.64",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.65",
         "ultima_ip": "192.168.1.126",
         "broadcast": "192.168.1.127",
         "mascara": "255.255.255.192",
         "hosts": 62,
-        "prefijo": 26
+        "prefijo": "/26"
     },
     {
-        "direccion_red": "192.168.1.128",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.129",
         "ultima_ip": "192.168.1.190",
         "broadcast": "192.168.1.191",
         "mascara": "255.255.255.192",
         "hosts": 62,
-        "prefijo": 26
+        "prefijo": "/26"
     },
     {
-        "direccion_red": "192.168.1.192",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.193",
         "ultima_ip": "192.168.1.254",
         "broadcast": "192.168.1.255",
         "mascara": "255.255.255.192",
         "hosts": 62,
-        "prefijo": 26
+        "prefijo": "/26"
     },
     {
         "direccion_red": "192.168.1.0",
@@ -51,70 +69,2239 @@
         "broadcast": "192.168.1.31",
         "mascara": "255.255.255.224",
         "hosts": 30,
-        "prefijo": 27
+        "prefijo": "/27"
     },
     {
-        "direccion_red": "192.168.1.32",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.33",
         "ultima_ip": "192.168.1.62",
         "broadcast": "192.168.1.63",
         "mascara": "255.255.255.224",
         "hosts": 30,
-        "prefijo": 27
+        "prefijo": "/27"
     },
     {
-        "direccion_red": "192.168.1.64",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.65",
         "ultima_ip": "192.168.1.94",
         "broadcast": "192.168.1.95",
         "mascara": "255.255.255.224",
         "hosts": 30,
-        "prefijo": 27
+        "prefijo": "/27"
     },
     {
-        "direccion_red": "192.168.1.96",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.97",
         "ultima_ip": "192.168.1.126",
         "broadcast": "192.168.1.127",
         "mascara": "255.255.255.224",
         "hosts": 30,
-        "prefijo": 27
+        "prefijo": "/27"
     },
     {
-        "direccion_red": "192.168.1.128",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.129",
         "ultima_ip": "192.168.1.158",
         "broadcast": "192.168.1.159",
         "mascara": "255.255.255.224",
         "hosts": 30,
-        "prefijo": 27
+        "prefijo": "/27"
     },
     {
-        "direccion_red": "192.168.1.160",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.161",
         "ultima_ip": "192.168.1.190",
         "broadcast": "192.168.1.191",
         "mascara": "255.255.255.224",
         "hosts": 30,
-        "prefijo": 27
+        "prefijo": "/27"
     },
     {
-        "direccion_red": "192.168.1.192",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.193",
         "ultima_ip": "192.168.1.222",
         "broadcast": "192.168.1.223",
         "mascara": "255.255.255.224",
         "hosts": 30,
-        "prefijo": 27
+        "prefijo": "/27"
     },
     {
-        "direccion_red": "192.168.1.224",
+        "direccion_red": "192.168.1.0",
         "primer_ip": "192.168.1.225",
         "ultima_ip": "192.168.1.254",
         "broadcast": "192.168.1.255",
         "mascara": "255.255.255.224",
         "hosts": 30,
-        "prefijo": 27
+        "prefijo": "/27"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.1",
+        "ultima_ip": "192.168.1.14",
+        "broadcast": "192.168.1.15",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.17",
+        "ultima_ip": "192.168.1.30",
+        "broadcast": "192.168.1.31",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.33",
+        "ultima_ip": "192.168.1.46",
+        "broadcast": "192.168.1.47",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.49",
+        "ultima_ip": "192.168.1.62",
+        "broadcast": "192.168.1.63",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.65",
+        "ultima_ip": "192.168.1.78",
+        "broadcast": "192.168.1.79",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.81",
+        "ultima_ip": "192.168.1.94",
+        "broadcast": "192.168.1.95",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.97",
+        "ultima_ip": "192.168.1.110",
+        "broadcast": "192.168.1.111",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.113",
+        "ultima_ip": "192.168.1.126",
+        "broadcast": "192.168.1.127",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.129",
+        "ultima_ip": "192.168.1.142",
+        "broadcast": "192.168.1.143",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.145",
+        "ultima_ip": "192.168.1.158",
+        "broadcast": "192.168.1.159",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.161",
+        "ultima_ip": "192.168.1.174",
+        "broadcast": "192.168.1.175",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.177",
+        "ultima_ip": "192.168.1.190",
+        "broadcast": "192.168.1.191",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.193",
+        "ultima_ip": "192.168.1.206",
+        "broadcast": "192.168.1.207",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.209",
+        "ultima_ip": "192.168.1.222",
+        "broadcast": "192.168.1.223",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.225",
+        "ultima_ip": "192.168.1.238",
+        "broadcast": "192.168.1.239",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.241",
+        "ultima_ip": "192.168.1.254",
+        "broadcast": "192.168.1.255",
+        "mascara": "255.255.255.240",
+        "hosts": 14,
+        "prefijo": "/28"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.1",
+        "ultima_ip": "192.168.1.6",
+        "broadcast": "192.168.1.7",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.9",
+        "ultima_ip": "192.168.1.14",
+        "broadcast": "192.168.1.15",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.17",
+        "ultima_ip": "192.168.1.22",
+        "broadcast": "192.168.1.23",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.25",
+        "ultima_ip": "192.168.1.30",
+        "broadcast": "192.168.1.31",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.33",
+        "ultima_ip": "192.168.1.38",
+        "broadcast": "192.168.1.39",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.41",
+        "ultima_ip": "192.168.1.46",
+        "broadcast": "192.168.1.47",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.49",
+        "ultima_ip": "192.168.1.54",
+        "broadcast": "192.168.1.55",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.57",
+        "ultima_ip": "192.168.1.62",
+        "broadcast": "192.168.1.63",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.65",
+        "ultima_ip": "192.168.1.70",
+        "broadcast": "192.168.1.71",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.73",
+        "ultima_ip": "192.168.1.78",
+        "broadcast": "192.168.1.79",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.81",
+        "ultima_ip": "192.168.1.86",
+        "broadcast": "192.168.1.87",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.89",
+        "ultima_ip": "192.168.1.94",
+        "broadcast": "192.168.1.95",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.97",
+        "ultima_ip": "192.168.1.102",
+        "broadcast": "192.168.1.103",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.105",
+        "ultima_ip": "192.168.1.110",
+        "broadcast": "192.168.1.111",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.113",
+        "ultima_ip": "192.168.1.118",
+        "broadcast": "192.168.1.119",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.121",
+        "ultima_ip": "192.168.1.126",
+        "broadcast": "192.168.1.127",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.129",
+        "ultima_ip": "192.168.1.134",
+        "broadcast": "192.168.1.135",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.137",
+        "ultima_ip": "192.168.1.142",
+        "broadcast": "192.168.1.143",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.145",
+        "ultima_ip": "192.168.1.150",
+        "broadcast": "192.168.1.151",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.153",
+        "ultima_ip": "192.168.1.158",
+        "broadcast": "192.168.1.159",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.161",
+        "ultima_ip": "192.168.1.166",
+        "broadcast": "192.168.1.167",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.169",
+        "ultima_ip": "192.168.1.174",
+        "broadcast": "192.168.1.175",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.177",
+        "ultima_ip": "192.168.1.182",
+        "broadcast": "192.168.1.183",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.185",
+        "ultima_ip": "192.168.1.190",
+        "broadcast": "192.168.1.191",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.193",
+        "ultima_ip": "192.168.1.198",
+        "broadcast": "192.168.1.199",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.201",
+        "ultima_ip": "192.168.1.206",
+        "broadcast": "192.168.1.207",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.209",
+        "ultima_ip": "192.168.1.214",
+        "broadcast": "192.168.1.215",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.217",
+        "ultima_ip": "192.168.1.222",
+        "broadcast": "192.168.1.223",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.225",
+        "ultima_ip": "192.168.1.230",
+        "broadcast": "192.168.1.231",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.233",
+        "ultima_ip": "192.168.1.238",
+        "broadcast": "192.168.1.239",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.241",
+        "ultima_ip": "192.168.1.246",
+        "broadcast": "192.168.1.247",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.249",
+        "ultima_ip": "192.168.1.254",
+        "broadcast": "192.168.1.255",
+        "mascara": "255.255.255.248",
+        "hosts": 6,
+        "prefijo": "/29"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.1",
+        "ultima_ip": "192.168.1.2",
+        "broadcast": "192.168.1.3",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.5",
+        "ultima_ip": "192.168.1.6",
+        "broadcast": "192.168.1.7",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.9",
+        "ultima_ip": "192.168.1.10",
+        "broadcast": "192.168.1.11",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.13",
+        "ultima_ip": "192.168.1.14",
+        "broadcast": "192.168.1.15",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.17",
+        "ultima_ip": "192.168.1.18",
+        "broadcast": "192.168.1.19",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.21",
+        "ultima_ip": "192.168.1.22",
+        "broadcast": "192.168.1.23",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.25",
+        "ultima_ip": "192.168.1.26",
+        "broadcast": "192.168.1.27",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.29",
+        "ultima_ip": "192.168.1.30",
+        "broadcast": "192.168.1.31",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.33",
+        "ultima_ip": "192.168.1.34",
+        "broadcast": "192.168.1.35",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.37",
+        "ultima_ip": "192.168.1.38",
+        "broadcast": "192.168.1.39",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.41",
+        "ultima_ip": "192.168.1.42",
+        "broadcast": "192.168.1.43",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.45",
+        "ultima_ip": "192.168.1.46",
+        "broadcast": "192.168.1.47",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.49",
+        "ultima_ip": "192.168.1.50",
+        "broadcast": "192.168.1.51",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.53",
+        "ultima_ip": "192.168.1.54",
+        "broadcast": "192.168.1.55",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.57",
+        "ultima_ip": "192.168.1.58",
+        "broadcast": "192.168.1.59",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.61",
+        "ultima_ip": "192.168.1.62",
+        "broadcast": "192.168.1.63",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.65",
+        "ultima_ip": "192.168.1.66",
+        "broadcast": "192.168.1.67",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.69",
+        "ultima_ip": "192.168.1.70",
+        "broadcast": "192.168.1.71",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.73",
+        "ultima_ip": "192.168.1.74",
+        "broadcast": "192.168.1.75",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.77",
+        "ultima_ip": "192.168.1.78",
+        "broadcast": "192.168.1.79",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.81",
+        "ultima_ip": "192.168.1.82",
+        "broadcast": "192.168.1.83",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.85",
+        "ultima_ip": "192.168.1.86",
+        "broadcast": "192.168.1.87",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.89",
+        "ultima_ip": "192.168.1.90",
+        "broadcast": "192.168.1.91",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.93",
+        "ultima_ip": "192.168.1.94",
+        "broadcast": "192.168.1.95",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.97",
+        "ultima_ip": "192.168.1.98",
+        "broadcast": "192.168.1.99",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.101",
+        "ultima_ip": "192.168.1.102",
+        "broadcast": "192.168.1.103",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.105",
+        "ultima_ip": "192.168.1.106",
+        "broadcast": "192.168.1.107",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.109",
+        "ultima_ip": "192.168.1.110",
+        "broadcast": "192.168.1.111",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.113",
+        "ultima_ip": "192.168.1.114",
+        "broadcast": "192.168.1.115",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.117",
+        "ultima_ip": "192.168.1.118",
+        "broadcast": "192.168.1.119",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.121",
+        "ultima_ip": "192.168.1.122",
+        "broadcast": "192.168.1.123",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.125",
+        "ultima_ip": "192.168.1.126",
+        "broadcast": "192.168.1.127",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.129",
+        "ultima_ip": "192.168.1.130",
+        "broadcast": "192.168.1.131",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.133",
+        "ultima_ip": "192.168.1.134",
+        "broadcast": "192.168.1.135",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.137",
+        "ultima_ip": "192.168.1.138",
+        "broadcast": "192.168.1.139",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.141",
+        "ultima_ip": "192.168.1.142",
+        "broadcast": "192.168.1.143",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.145",
+        "ultima_ip": "192.168.1.146",
+        "broadcast": "192.168.1.147",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.149",
+        "ultima_ip": "192.168.1.150",
+        "broadcast": "192.168.1.151",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.153",
+        "ultima_ip": "192.168.1.154",
+        "broadcast": "192.168.1.155",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.157",
+        "ultima_ip": "192.168.1.158",
+        "broadcast": "192.168.1.159",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.161",
+        "ultima_ip": "192.168.1.162",
+        "broadcast": "192.168.1.163",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.165",
+        "ultima_ip": "192.168.1.166",
+        "broadcast": "192.168.1.167",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.169",
+        "ultima_ip": "192.168.1.170",
+        "broadcast": "192.168.1.171",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.173",
+        "ultima_ip": "192.168.1.174",
+        "broadcast": "192.168.1.175",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.177",
+        "ultima_ip": "192.168.1.178",
+        "broadcast": "192.168.1.179",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.181",
+        "ultima_ip": "192.168.1.182",
+        "broadcast": "192.168.1.183",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.185",
+        "ultima_ip": "192.168.1.186",
+        "broadcast": "192.168.1.187",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.189",
+        "ultima_ip": "192.168.1.190",
+        "broadcast": "192.168.1.191",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.193",
+        "ultima_ip": "192.168.1.194",
+        "broadcast": "192.168.1.195",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.197",
+        "ultima_ip": "192.168.1.198",
+        "broadcast": "192.168.1.199",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.201",
+        "ultima_ip": "192.168.1.202",
+        "broadcast": "192.168.1.203",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.205",
+        "ultima_ip": "192.168.1.206",
+        "broadcast": "192.168.1.207",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.209",
+        "ultima_ip": "192.168.1.210",
+        "broadcast": "192.168.1.211",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.213",
+        "ultima_ip": "192.168.1.214",
+        "broadcast": "192.168.1.215",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.217",
+        "ultima_ip": "192.168.1.218",
+        "broadcast": "192.168.1.219",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.221",
+        "ultima_ip": "192.168.1.222",
+        "broadcast": "192.168.1.223",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.225",
+        "ultima_ip": "192.168.1.226",
+        "broadcast": "192.168.1.227",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.229",
+        "ultima_ip": "192.168.1.230",
+        "broadcast": "192.168.1.231",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.233",
+        "ultima_ip": "192.168.1.234",
+        "broadcast": "192.168.1.235",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.237",
+        "ultima_ip": "192.168.1.238",
+        "broadcast": "192.168.1.239",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.241",
+        "ultima_ip": "192.168.1.242",
+        "broadcast": "192.168.1.243",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.245",
+        "ultima_ip": "192.168.1.246",
+        "broadcast": "192.168.1.247",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.249",
+        "ultima_ip": "192.168.1.250",
+        "broadcast": "192.168.1.251",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.253",
+        "ultima_ip": "192.168.1.254",
+        "broadcast": "192.168.1.255",
+        "mascara": "255.255.255.252",
+        "hosts": 2,
+        "prefijo": "/30"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.0",
+        "ultima_ip": "192.168.1.1",
+        "broadcast": "192.168.1.1",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.2",
+        "ultima_ip": "192.168.1.3",
+        "broadcast": "192.168.1.3",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.4",
+        "ultima_ip": "192.168.1.5",
+        "broadcast": "192.168.1.5",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.6",
+        "ultima_ip": "192.168.1.7",
+        "broadcast": "192.168.1.7",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.8",
+        "ultima_ip": "192.168.1.9",
+        "broadcast": "192.168.1.9",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.10",
+        "ultima_ip": "192.168.1.11",
+        "broadcast": "192.168.1.11",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.12",
+        "ultima_ip": "192.168.1.13",
+        "broadcast": "192.168.1.13",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.14",
+        "ultima_ip": "192.168.1.15",
+        "broadcast": "192.168.1.15",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.16",
+        "ultima_ip": "192.168.1.17",
+        "broadcast": "192.168.1.17",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.18",
+        "ultima_ip": "192.168.1.19",
+        "broadcast": "192.168.1.19",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.20",
+        "ultima_ip": "192.168.1.21",
+        "broadcast": "192.168.1.21",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.22",
+        "ultima_ip": "192.168.1.23",
+        "broadcast": "192.168.1.23",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.24",
+        "ultima_ip": "192.168.1.25",
+        "broadcast": "192.168.1.25",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.26",
+        "ultima_ip": "192.168.1.27",
+        "broadcast": "192.168.1.27",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.28",
+        "ultima_ip": "192.168.1.29",
+        "broadcast": "192.168.1.29",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.30",
+        "ultima_ip": "192.168.1.31",
+        "broadcast": "192.168.1.31",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.32",
+        "ultima_ip": "192.168.1.33",
+        "broadcast": "192.168.1.33",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.34",
+        "ultima_ip": "192.168.1.35",
+        "broadcast": "192.168.1.35",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.36",
+        "ultima_ip": "192.168.1.37",
+        "broadcast": "192.168.1.37",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.38",
+        "ultima_ip": "192.168.1.39",
+        "broadcast": "192.168.1.39",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.40",
+        "ultima_ip": "192.168.1.41",
+        "broadcast": "192.168.1.41",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.42",
+        "ultima_ip": "192.168.1.43",
+        "broadcast": "192.168.1.43",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.44",
+        "ultima_ip": "192.168.1.45",
+        "broadcast": "192.168.1.45",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.46",
+        "ultima_ip": "192.168.1.47",
+        "broadcast": "192.168.1.47",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.48",
+        "ultima_ip": "192.168.1.49",
+        "broadcast": "192.168.1.49",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.50",
+        "ultima_ip": "192.168.1.51",
+        "broadcast": "192.168.1.51",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.52",
+        "ultima_ip": "192.168.1.53",
+        "broadcast": "192.168.1.53",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.54",
+        "ultima_ip": "192.168.1.55",
+        "broadcast": "192.168.1.55",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.56",
+        "ultima_ip": "192.168.1.57",
+        "broadcast": "192.168.1.57",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.58",
+        "ultima_ip": "192.168.1.59",
+        "broadcast": "192.168.1.59",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.60",
+        "ultima_ip": "192.168.1.61",
+        "broadcast": "192.168.1.61",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.62",
+        "ultima_ip": "192.168.1.63",
+        "broadcast": "192.168.1.63",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.64",
+        "ultima_ip": "192.168.1.65",
+        "broadcast": "192.168.1.65",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.66",
+        "ultima_ip": "192.168.1.67",
+        "broadcast": "192.168.1.67",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.68",
+        "ultima_ip": "192.168.1.69",
+        "broadcast": "192.168.1.69",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.70",
+        "ultima_ip": "192.168.1.71",
+        "broadcast": "192.168.1.71",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.72",
+        "ultima_ip": "192.168.1.73",
+        "broadcast": "192.168.1.73",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.74",
+        "ultima_ip": "192.168.1.75",
+        "broadcast": "192.168.1.75",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.76",
+        "ultima_ip": "192.168.1.77",
+        "broadcast": "192.168.1.77",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.78",
+        "ultima_ip": "192.168.1.79",
+        "broadcast": "192.168.1.79",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.80",
+        "ultima_ip": "192.168.1.81",
+        "broadcast": "192.168.1.81",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.82",
+        "ultima_ip": "192.168.1.83",
+        "broadcast": "192.168.1.83",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.84",
+        "ultima_ip": "192.168.1.85",
+        "broadcast": "192.168.1.85",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.86",
+        "ultima_ip": "192.168.1.87",
+        "broadcast": "192.168.1.87",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.88",
+        "ultima_ip": "192.168.1.89",
+        "broadcast": "192.168.1.89",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.90",
+        "ultima_ip": "192.168.1.91",
+        "broadcast": "192.168.1.91",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.92",
+        "ultima_ip": "192.168.1.93",
+        "broadcast": "192.168.1.93",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.94",
+        "ultima_ip": "192.168.1.95",
+        "broadcast": "192.168.1.95",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.96",
+        "ultima_ip": "192.168.1.97",
+        "broadcast": "192.168.1.97",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.98",
+        "ultima_ip": "192.168.1.99",
+        "broadcast": "192.168.1.99",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.100",
+        "ultima_ip": "192.168.1.101",
+        "broadcast": "192.168.1.101",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.102",
+        "ultima_ip": "192.168.1.103",
+        "broadcast": "192.168.1.103",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.104",
+        "ultima_ip": "192.168.1.105",
+        "broadcast": "192.168.1.105",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.106",
+        "ultima_ip": "192.168.1.107",
+        "broadcast": "192.168.1.107",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.108",
+        "ultima_ip": "192.168.1.109",
+        "broadcast": "192.168.1.109",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.110",
+        "ultima_ip": "192.168.1.111",
+        "broadcast": "192.168.1.111",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.112",
+        "ultima_ip": "192.168.1.113",
+        "broadcast": "192.168.1.113",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.114",
+        "ultima_ip": "192.168.1.115",
+        "broadcast": "192.168.1.115",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.116",
+        "ultima_ip": "192.168.1.117",
+        "broadcast": "192.168.1.117",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.118",
+        "ultima_ip": "192.168.1.119",
+        "broadcast": "192.168.1.119",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.120",
+        "ultima_ip": "192.168.1.121",
+        "broadcast": "192.168.1.121",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.122",
+        "ultima_ip": "192.168.1.123",
+        "broadcast": "192.168.1.123",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.124",
+        "ultima_ip": "192.168.1.125",
+        "broadcast": "192.168.1.125",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.126",
+        "ultima_ip": "192.168.1.127",
+        "broadcast": "192.168.1.127",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.128",
+        "ultima_ip": "192.168.1.129",
+        "broadcast": "192.168.1.129",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.130",
+        "ultima_ip": "192.168.1.131",
+        "broadcast": "192.168.1.131",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.132",
+        "ultima_ip": "192.168.1.133",
+        "broadcast": "192.168.1.133",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.134",
+        "ultima_ip": "192.168.1.135",
+        "broadcast": "192.168.1.135",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.136",
+        "ultima_ip": "192.168.1.137",
+        "broadcast": "192.168.1.137",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.138",
+        "ultima_ip": "192.168.1.139",
+        "broadcast": "192.168.1.139",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.140",
+        "ultima_ip": "192.168.1.141",
+        "broadcast": "192.168.1.141",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.142",
+        "ultima_ip": "192.168.1.143",
+        "broadcast": "192.168.1.143",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.144",
+        "ultima_ip": "192.168.1.145",
+        "broadcast": "192.168.1.145",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.146",
+        "ultima_ip": "192.168.1.147",
+        "broadcast": "192.168.1.147",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.148",
+        "ultima_ip": "192.168.1.149",
+        "broadcast": "192.168.1.149",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.150",
+        "ultima_ip": "192.168.1.151",
+        "broadcast": "192.168.1.151",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.152",
+        "ultima_ip": "192.168.1.153",
+        "broadcast": "192.168.1.153",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.154",
+        "ultima_ip": "192.168.1.155",
+        "broadcast": "192.168.1.155",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.156",
+        "ultima_ip": "192.168.1.157",
+        "broadcast": "192.168.1.157",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.158",
+        "ultima_ip": "192.168.1.159",
+        "broadcast": "192.168.1.159",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.160",
+        "ultima_ip": "192.168.1.161",
+        "broadcast": "192.168.1.161",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.162",
+        "ultima_ip": "192.168.1.163",
+        "broadcast": "192.168.1.163",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.164",
+        "ultima_ip": "192.168.1.165",
+        "broadcast": "192.168.1.165",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.166",
+        "ultima_ip": "192.168.1.167",
+        "broadcast": "192.168.1.167",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.168",
+        "ultima_ip": "192.168.1.169",
+        "broadcast": "192.168.1.169",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.170",
+        "ultima_ip": "192.168.1.171",
+        "broadcast": "192.168.1.171",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.172",
+        "ultima_ip": "192.168.1.173",
+        "broadcast": "192.168.1.173",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.174",
+        "ultima_ip": "192.168.1.175",
+        "broadcast": "192.168.1.175",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.176",
+        "ultima_ip": "192.168.1.177",
+        "broadcast": "192.168.1.177",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.178",
+        "ultima_ip": "192.168.1.179",
+        "broadcast": "192.168.1.179",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.180",
+        "ultima_ip": "192.168.1.181",
+        "broadcast": "192.168.1.181",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.182",
+        "ultima_ip": "192.168.1.183",
+        "broadcast": "192.168.1.183",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.184",
+        "ultima_ip": "192.168.1.185",
+        "broadcast": "192.168.1.185",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.186",
+        "ultima_ip": "192.168.1.187",
+        "broadcast": "192.168.1.187",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.188",
+        "ultima_ip": "192.168.1.189",
+        "broadcast": "192.168.1.189",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.190",
+        "ultima_ip": "192.168.1.191",
+        "broadcast": "192.168.1.191",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.192",
+        "ultima_ip": "192.168.1.193",
+        "broadcast": "192.168.1.193",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.194",
+        "ultima_ip": "192.168.1.195",
+        "broadcast": "192.168.1.195",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.196",
+        "ultima_ip": "192.168.1.197",
+        "broadcast": "192.168.1.197",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.198",
+        "ultima_ip": "192.168.1.199",
+        "broadcast": "192.168.1.199",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.200",
+        "ultima_ip": "192.168.1.201",
+        "broadcast": "192.168.1.201",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.202",
+        "ultima_ip": "192.168.1.203",
+        "broadcast": "192.168.1.203",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.204",
+        "ultima_ip": "192.168.1.205",
+        "broadcast": "192.168.1.205",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.206",
+        "ultima_ip": "192.168.1.207",
+        "broadcast": "192.168.1.207",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.208",
+        "ultima_ip": "192.168.1.209",
+        "broadcast": "192.168.1.209",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.210",
+        "ultima_ip": "192.168.1.211",
+        "broadcast": "192.168.1.211",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.212",
+        "ultima_ip": "192.168.1.213",
+        "broadcast": "192.168.1.213",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.214",
+        "ultima_ip": "192.168.1.215",
+        "broadcast": "192.168.1.215",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.216",
+        "ultima_ip": "192.168.1.217",
+        "broadcast": "192.168.1.217",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.218",
+        "ultima_ip": "192.168.1.219",
+        "broadcast": "192.168.1.219",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.220",
+        "ultima_ip": "192.168.1.221",
+        "broadcast": "192.168.1.221",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.222",
+        "ultima_ip": "192.168.1.223",
+        "broadcast": "192.168.1.223",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.224",
+        "ultima_ip": "192.168.1.225",
+        "broadcast": "192.168.1.225",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.226",
+        "ultima_ip": "192.168.1.227",
+        "broadcast": "192.168.1.227",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.228",
+        "ultima_ip": "192.168.1.229",
+        "broadcast": "192.168.1.229",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.230",
+        "ultima_ip": "192.168.1.231",
+        "broadcast": "192.168.1.231",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.232",
+        "ultima_ip": "192.168.1.233",
+        "broadcast": "192.168.1.233",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.234",
+        "ultima_ip": "192.168.1.235",
+        "broadcast": "192.168.1.235",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.236",
+        "ultima_ip": "192.168.1.237",
+        "broadcast": "192.168.1.237",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.238",
+        "ultima_ip": "192.168.1.239",
+        "broadcast": "192.168.1.239",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.240",
+        "ultima_ip": "192.168.1.241",
+        "broadcast": "192.168.1.241",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.242",
+        "ultima_ip": "192.168.1.243",
+        "broadcast": "192.168.1.243",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.244",
+        "ultima_ip": "192.168.1.245",
+        "broadcast": "192.168.1.245",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.246",
+        "ultima_ip": "192.168.1.247",
+        "broadcast": "192.168.1.247",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.248",
+        "ultima_ip": "192.168.1.249",
+        "broadcast": "192.168.1.249",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.250",
+        "ultima_ip": "192.168.1.251",
+        "broadcast": "192.168.1.251",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.252",
+        "ultima_ip": "192.168.1.253",
+        "broadcast": "192.168.1.253",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.254",
+        "ultima_ip": "192.168.1.255",
+        "broadcast": "192.168.1.255",
+        "mascara": "255.255.255.254",
+        "hosts": 2,
+        "prefijo": "/31"
+    },
+    {
+        "direccion_red": "192.168.1.0",
+        "primer_ip": "192.168.1.0",
+        "ultima_ip": "192.168.1.0",
+        "broadcast": "192.168.1.0",
+        "mascara": "255.255.255.255",
+        "hosts": 1,
+        "prefijo": "/32"
     },
     {
         "direccion_red": "10.0.0.0",
@@ -123,6 +2310,15 @@
         "broadcast": "10.255.255.255",
         "mascara": "255.0.0.0",
         "hosts": 16777214,
-        "prefijo": 8
+        "prefijo": "/8"
+    },
+    {
+        "direccion_red": "172.16.0.0",
+        "primer_ip": "172.16.0.1",
+        "ultima_ip": "172.31.255.254",
+        "broadcast": "172.31.255.255",
+        "mascara": "255.240.0.0",
+        "hosts": 1048574,
+        "prefijo": "/12"
     }
 ]
