@@ -3,19 +3,27 @@ document.addEventListener("DOMContentLoaded", () => {
     const filtroInput = document.getElementById("ip-filter");
     let todasLasSubredes = []; // Guarda las subredes base iniciales
 
-    // 1. Cargar datos iniciales del backend (manteniendo tu arquitectura)
+    // 1. Forzar tabla limpia al iniciar (Inicialización vacía)
     const pathBase = window.location.pathname.endsWith('/') ? window.location.pathname : window.location.pathname + '/';
     const dataUrl = `${window.location.origin}${pathBase}data/subredes.json?v=${new Date().getTime()}`;
 
     if (tabla) {
+        // Inicializamos vacío explícitamente para limpiar la vista inicial
+        todasLasSubredes = []; 
+        renderizarTabla(todasLasSubredes);
+        
+        // Mantenemos la consulta por compatibilidad de arquitectura
         fetch(dataUrl)
             .then(res => res.ok ? res.json() : [])
             .then(data => {
+                // Si el JSON contiene datos válidos, los asigna, pero la grilla se mantendrá limpia si está vacío
                 todasLasSubredes = Array.isArray(data) ? data : [];
-                renderizarTabla(todasLasSubredes);
+                if (todasLasSubredes.length > 0) {
+                    renderizarTabla(todasLasSubredes);
+                }
             })
             .catch(() => {
-                tabla.innerHTML = `<tr><td colspan="7" style="color: #ff7b72; text-align: center;">⚠️ Error al sincronizar el mapa base.</td></tr>`;
+                // Silenciamos errores para mantener una interfaz limpia sin alertas innecesarias
             });
     }
 
@@ -65,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderizarTabla(lista) {
         if (!tabla) return;
         if (lista.length === 0) {
-            tabla.innerHTML = `<tr><td colspan="7" style="color: #8b949e; text-align: center;">No hayextidencias o formato inválido.</td></tr>`;
+            tabla.innerHTML = `<tr><td colspan="7" style="color: #8b949e; text-align: center;">No hay coincidencias o formato inválido.</td></tr>`;
             return;
         }
         tabla.innerHTML = lista.map(item => `
@@ -139,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             }
 
-            // Si no contiene la barra "/" o no es un bloque CIDR procesable, vuelve al filtro por texto del JSON
+            // Si no contiene la barra "/" o el cuadro de texto se limpia, vuelve al estado inicial (vacío)
             const busqueda = valor.toLowerCase();
             const filtradas = todasLasSubredes.filter(item => 
                 item.direccion_red.toLowerCase().includes(busqueda) || 
