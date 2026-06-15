@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function renderizarTabla(lista) {
         if (!tabla) return;
         if (lista.length === 0) {
-            tabla.innerHTML = `<tr><td colspan="7" style="color: #8b949e; text-align: center;">No hay coincidencias o formato inválido.</td></tr>`;
+            tabla.innerHTML = `<tr><td colspan="7" style="color: #8b949e; text-align: center;">No hayextidencias o formato inválido.</td></tr>`;
             return;
         }
         tabla.innerHTML = lista.map(item => `
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
         `).join('');
     }
 
-    // 3. ESCUCHA REACTIVA INTELIGENTE
+    // 3. ESCUCHA REACTIVA INTELIGENTE (Multi-Tramo Correlativo)
     if (filtroInput) {
         filtroInput.addEventListener("input", (e) => {
             const valor = e.target.value.trim();
@@ -92,15 +92,54 @@ document.addEventListener("DOMContentLoaded", () => {
                 const ipParte = partes[0];
                 const prefijoParte = parseInt(partes[1], 10);
 
-                const resultadoDinamico = calcularSubredDinamica(ipParte, prefijoParte);
-                
-                if (resultadoDinamico) {
-                    renderizarTabla([resultadoDinamico]); // Renderiza el cálculo en tiempo real
-                    return;
+                // Validamos que el prefijo ingresado sea un número de red válido
+                if (!isNaN(prefijoParte) && prefijoParte >= 0 && prefijoParte <= 32) {
+                    
+                    // Si el prefijo es menor a 24, calculamos solo la subred específica de esa IP para evitar bucles gigantes
+                    if (prefijoParte < 24) {
+                        const resultadoDinamico = calcularSubredDinamica(ipParte, prefijoParte);
+                        if (resultadoDinamico) {
+                            renderizarTabla([resultadoDinamico]);
+                            return;
+                        }
+                    } else {
+                        // Para prefijos >= 24, calculamos de manera automática TODOS los tramos correlativos de la red
+                        const octetos = ipParte.split('.').map(Number);
+                        if (octetos.length === 4 && !octetos.some(isNaN) && !octetos.some(o => o < 0 || o > 255)) {
+                            
+                            const tamañoSubred = 1 << (32 - prefijoParte); // Cuántas IPs ocupa cada bloque
+                            const cantidadTramos = 1 << (prefijoParte - 24); // Cuántos bloques caben en el último octeto
+                            
+                            const listaDeTramos = [];
+                            
+                            // Forzar que el cálculo comience desde la base real de la red con una operación de bits
+                            const ipNumBase = (octetos[0] << 24) >>> 0 | (octetos[1] << 16) | (octetos[2] << 8) | octetos[3];
+                            const maskNumBase = (~0 << (32 - prefijoParte)) >>> 0;
+                            const netNumBase = (ipNumBase & maskNumBase) >>> 0;
+                            
+                            // Iteramos para calcular consecutivamente cada uno de los tramos (.0, .32, .64, etc.)
+                            for (let i = 0; i < cantidadTramos; i++) {
+                                const cuartoOctetoCalculado = (netNumBase & 255) + (i * tamañoSubred);
+                                
+                                // Construimos el string IP para mapear el tramo actual
+                                const ipTramo = `${octetos[0]}.${octetos[1]}.${octetos[2]}.${cuartoOctetoCalculado}`;
+                                const datosTramo = calcularSubredDinamica(ipTramo, prefijoParte);
+                                
+                                if (datosTramo) {
+                                    listaDeTramos.push(datosTramo);
+                                }
+                            }
+                            
+                            if (listaDeTramos.length > 0) {
+                                renderizarTabla(listaDeTramos); // Imprime la topología completa en pantalla
+                                return;
+                            }
+                        }
+                    }
                 }
             }
 
-            // Si no es un bloque CIDR válido, vuelve al modo filtro de la lista base
+            // Si no contiene la barra "/" o no es un bloque CIDR procesable, vuelve al filtro por texto del JSON
             const busqueda = valor.toLowerCase();
             const filtradas = todasLasSubredes.filter(item => 
                 item.direccion_red.toLowerCase().includes(busqueda) || 
